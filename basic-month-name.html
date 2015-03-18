@@ -31,18 +31,18 @@ BasicMonthName = {
 
   // Default names, used if Globalize is not avaialble.
   names: [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
   ]
 
 };
@@ -73,15 +73,15 @@ Polymer({
   monthChanged: function() {
     culture = this.culture;
     monthNameEnum = culture ? culture.calendar.months.names : BasicMonthName.names;
-    monthName = monthNameEnum[ this.month ];
+    monthName = monthNameEnum[this.month];
     this.$.name.textContent = monthName;
   },
 
   ready: function() {
     this.super();
-    if ( !this.month ) {
+    if (!this.month) {
       // If no month is supplied, default to the current month.
-      this.month = ( new Date() ).getMonth();
+      this.month = (new Date()).getMonth();
     }
   }
 
